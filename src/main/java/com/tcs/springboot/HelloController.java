@@ -1,5 +1,6 @@
 package com.tcs.springboot;
 
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -7,7 +8,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/testing")
 public class HelloController {
     @RequestMapping(method = RequestMethod.GET)
-    public String nameSakeMethod(){
+    public String method(Model model){
+
+        model.addAttribute("tech","SpringBoot MVC");
+        model.addAttribute("name","Alex");
+        model.addAttribute("date","Twenty Fifth of April");
         return "Hello";  //we are returing the view THAT IS THE name of my html file from the template floder
     }
 
