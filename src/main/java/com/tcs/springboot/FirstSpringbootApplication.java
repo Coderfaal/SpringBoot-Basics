@@ -5,6 +5,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 import java.util.Date;
 
@@ -14,8 +15,12 @@ public class FirstSpringbootApplication implements ApplicationRunner {
     @Autowired
     ProductRepository repository;
 	public static void main(String[] args) {
-
         SpringApplication.run(FirstSpringbootApplication.class, args);
+//       ConfigurableApplicationContext context = SpringApplication.run(FirstSpringbootApplication.class, args);
+//       String[] beans = context.getBeanDefinitionNames();
+//       for(String bean :beans){
+//           System.out.println(bean);}
+//        System.out.println(beans.length);
 	}
 
     @Override
