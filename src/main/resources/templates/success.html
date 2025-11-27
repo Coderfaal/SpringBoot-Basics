@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Success</title>
 </head>
 <body>
         <h1>Registration Successfull!!</h1>
+
+            <h2>Welcome &nbsp;</h2>
+            <h3>
+                <p th:text="${uid}"></p>
+
+                <p th:text="${uname}">:)</p>
+
+                <p th:text="${password}"></p>
+            </h3>
+        <hr color="pink" size="4">
+     <h3>
+         <p th:text="${user.getUserId}"></p>
+
+         <p th:text="${user.getUserName}">:)</p>
+
+         <p th:text="${user.getPassword}"></p>
+     </h3>
 </body>
 </html>
